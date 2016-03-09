@@ -11,7 +11,7 @@ public class Registrar {
         populateLists();
     }
 
-    public Student login(int num) {  //compare login number sent in with students in stuList
+    public Student login(int num) {  //compare login number sent in with students in stuList to prevent students that dont exist from logging in
         boolean isDuplicate = false;
         for (SLNode tmp = stuList.head; tmp != null; tmp = tmp.next)  //cycle through stuList
         {
@@ -102,7 +102,7 @@ public class Registrar {
     }
 
     public void addCourse(Student stu, int courseNum)throws Exception{  //add class
-
+        boolean isFound = false;
         for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
             Course tmpCourse = (Course) (Course) tmp.getInfo();
             if(tmpCourse.courseNumber == courseNum){
@@ -111,7 +111,11 @@ public class Registrar {
                 }catch(Exception e){
                     throw e;
                 }
+                isFound = true;
             }
+        }
+        if(!isFound){
+            throw new Exception("Course not found.");
         }
 
     }

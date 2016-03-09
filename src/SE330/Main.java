@@ -6,10 +6,41 @@ public class Main {
 
     public static void main(String[] args) {
 	    Student currentStudent = null;
+
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-
+        int navigation = 0;
         Registrar SB2016 = new Registrar();
+        NavWrapper school = new NavWrapper(SB2016);
 
+        do{
+            System.out.printf("\n\nEnter: 1 - Login | 2 - Display Course List | 3 - Add Course | 4 - Drop Course | 5 - Display Course Students | 0 - Exit\n");
+            try {
+                navigation = Integer.parseInt(buffer.readLine().toString());
+            }catch(Exception e){
+                System.err.print(e);
+            }
+            switch (navigation){
+                case 1:
+                    school.loginWithNumber(navigation);
+                    break;
+                case 2:
+                    school.displayCourseList();
+                    break;
+                case 3:
+                    school.addCourse();
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    navigation = 0;
+                    break;
+            }
+
+        }while(navigation > 0);
+
+/*
         try {
             while(currentStudent == null) {
 
@@ -37,7 +68,7 @@ public class Main {
         }catch(Exception e){
             System.err.print(e);
         }
-
+*/
 
     }
 }

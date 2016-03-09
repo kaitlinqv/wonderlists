@@ -36,29 +36,32 @@ public class Course {
         }
     }//end printStuList
 
-    public void addStudent(Student stu) {  //add student but check current stuList to make sure there is no duplicate
-        boolean isDuplicate = false;
+    public void addStudent(Student stu) throws Exception {  //add student but check current stuList to make sure there is no duplicate
+
         for (SLNode tmp = stuList.head; tmp != null; tmp = tmp.next)  //cycle through this course's enrolled students
         {
             Student tmpStu = (Student) (Student) tmp.getInfo();
             if (tmpStu.ID == stu.ID)  //check Student in the list versus student you're adding
             {
-                isDuplicate = true;
+
+                throw new Exception("\nYou are already registered for this class!\n");
             }
         }
-        if(!isDuplicate) //if not duplicate
-        {
-            if(stu.classCount<4 && currentEnrolled<courseCapacity) {  //if student class count is less than 4 and the course hasn't reached capacity
+
+        if(stu.classCount<4) {  //if student class count is less than 4 and the course hasn't reached capacity
+            if(currentEnrolled<courseCapacity) {
                 stu.classCount++;
                 stuList.insertAtBack(stu);
                 currentEnrolled++;
             }else {
-                //something about being registered for too many classes and/or class is full
+                throw new Exception("\nThis class is full\n");
+
             }
-        }else
-        {
-            //print something about being already registered
+        }else {
+                //something about being registered for too many classes and/or class is full
+            throw new Exception("\nYou are already registered for 4 classes!\n");
         }
+
     }
 
     public void removeStudent(Student stu)throws Exception{
