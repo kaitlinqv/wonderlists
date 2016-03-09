@@ -48,13 +48,21 @@ public class Course {
             }
         }
 
+        for (SLNode tmp = waitList.head; tmp != null; tmp = tmp.next){
+            Student tmpStu = (Student) (Student) tmp.getInfo();
+            if (tmpStu.ID == stu.ID ){
+                waitList.delete(tmpStu);
+            }
+        }
+
         if(stu.classCount<4) {  //if student class count is less than 4 and the course hasn't reached capacity
             if(currentEnrolled<courseCapacity) {
                 stu.classCount++;
                 stuList.insertAtBack(stu);
                 currentEnrolled++;
             }else {
-                throw new Exception("\nThis class is full\n");
+                waitList.insertAtBack(stu);
+                throw new Exception("\nThis class is full, you have been added to the waitlist.\n");
 
             }
         }else {
@@ -75,7 +83,7 @@ public class Course {
                 stu.classCount--;
                 stuList.delete(stu);
                 currentEnrolled--;
-                //updateLists();  //update waitlist and stulist
+                updateLists();  //update waitlist and stulist
             }
         }
 
@@ -83,6 +91,17 @@ public class Course {
             throw new Exception ("You are not enrolled in this course");
         }
 
+    }
+
+    public void updateLists() {
+        int openings = courseCapacity - currentEnrolled;
+        for (int i = openings; i>0; i-- ){
+            try {
+                addStudent(waitList.deleteFromFront());
+            }catch(Exception e){
+                System.out.print("Something went wrong");
+            }
+        }
     }
 
     public void displayCourse() {  //display course, works great in a for loop when listing my SLList
