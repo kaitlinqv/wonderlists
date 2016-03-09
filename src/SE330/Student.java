@@ -13,6 +13,6 @@ public class Student {
     }
 
     public void displayStudent(){
-        System.out.printf("Student ID: %d\tCurrently enrolled in %d courses.\n", ID,classCount);
+        System.out.printf("Student ID: %d\tCurrently enrolled in %d course(s).\n", ID,classCount);
     }
 }

@@ -16,6 +16,7 @@ public class Main {
             System.out.printf("\n\nEnter: 1 - Login | 2 - Display Course List | 3 - Add Course | 4 - Drop Course | 5 - Display Course Students | 0 - Exit\n");
             try {
                 navigation = Integer.parseInt(buffer.readLine().toString());
+                System.out.println();
             }catch(Exception e){
                 System.err.print(e);
             }
@@ -30,8 +31,10 @@ public class Main {
                     school.addCourse();
                     break;
                 case 4:
+                    school.dropCourse();
                     break;
                 case 5:
+                    school.printCourseStudents();
                     break;
                 default:
                     navigation = 0;

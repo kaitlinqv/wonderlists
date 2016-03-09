@@ -41,9 +41,9 @@ public class Registrar {
             stuList.insertAtFront(newStu);
             tmp++;
         }
-        Course course1 = new Course("Typing", 12, 16);
-        Course course2 = new Course("English", 10, 20);
-        Course course3 = new Course("Math", 4, 20);
+        Course course1 = new Course("Typing", 12, 8);
+        Course course2 = new Course("English", 10, 6);
+        Course course3 = new Course("Math", 4, 3);
         courseList.insertAtFront(course1);
         courseList.insertAtFront(course2);
         courseList.insertAtFront(course3);

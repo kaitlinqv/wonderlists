@@ -41,8 +41,9 @@ public class NavWrapper {
             int check = 1;
             while( check > 0 ){
                 try{
-                    System.out.printf("\nPlease enter: Course Number | 1 - Course List | 0 - Back to menu\n ");
+                    System.out.printf("\nPlease enter: Course ID to ADD | 1 - Course List | 0 - Back to menu\n ");
                     int input = Integer.parseInt(buffer.readLine().toString());
+                    System.out.println();
                     if(input != 0 && input != 1) {
                         school.addCourse(currentStudent, input);
                         System.out.print("\nCourse Add Successful\n");
@@ -63,4 +64,63 @@ public class NavWrapper {
         return 3;
     }
 
+    public int dropCourse(){
+
+        if (currentStudent != null)
+        {
+            int check = 1;
+            while( check > 0 ){
+                try{
+                    System.out.printf("\nPlease enter: Course ID to DROP | 1 - Course List | 0 - Back to menu\n ");
+                    int input = Integer.parseInt(buffer.readLine().toString());
+                    System.out.println();
+                    if(input != 0 && input != 1) {
+                        school.dropCourse(currentStudent, input);
+                        System.out.print("\nCourse Drop Successful\n");
+                    }
+                    check = input;
+                    if(input == 1){
+                        school.printCourseList();
+                    }
+                }catch(Exception e) {
+                    System.out.printf("\n%s\n", e);
+                }
+                //Please enter course to add
+            }
+            //or 1 to display available courses
+        }else {
+            System.out.printf("\nPlease login first!\n");
+        }
+        return 3;
+    }
+
+    public int printCourseStudents(){
+        try{
+            int check = 1;
+            while( check > 0 ){
+                try{
+                    System.out.printf("\nPlease enter: Course ID to Display Roster | 1 - Course List | 0 - Back to menu\n ");
+                    int input = Integer.parseInt(buffer.readLine().toString());
+                    System.out.println();
+                    if(input != 0 && input != 1) {
+                        school.printCourseStudents(input);
+
+                    }
+                    check = input;
+                    if(input == 1){
+                        school.printCourseList();
+                    }
+                }catch(Exception e) {
+                    System.out.printf("\n%s\n", e);
+                }
+                //Please enter course to add
+            }
+
+
+        }catch(Exception e){
+
+        }
+
+        return 5;
+    }
 }
