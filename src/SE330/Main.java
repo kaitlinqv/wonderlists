@@ -28,9 +28,11 @@ public class Main {
                 SB2016.addCourse(currentStudent, number);
                 SB2016.printCourseStudents(number);
                 SB2016.printCourseList();
+                SB2016.printStuList();
                 SB2016.dropCourse(currentStudent, number);
                 //1SB2016.printCourseStudents(number);
                 SB2016.printCourseList();
+                SB2016.printStuList();
             }
         }catch(Exception e){
             System.err.print(e);

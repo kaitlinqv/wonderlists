@@ -6,13 +6,13 @@ package SE330;
 public class Student {
     public int ID;
     public int classCount;
-
+    //public String name;  //not used since using dummy students
     public Student(int i){
         ID = i;
         classCount = 0;
     }
 
-    public int getClassCount(){
-        return classCount;
+    public void displayStudent(){
+        System.out.printf("Student ID: %d\tCurrently enrolled in %d courses.\n", ID,classCount);
     }
 }

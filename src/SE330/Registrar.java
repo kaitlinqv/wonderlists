@@ -56,8 +56,7 @@ public class Registrar {
             for (SLNode tmp = stuList.head; tmp != null; tmp = tmp.next)
             {
                 Student tmpStu = (Student) (Student) tmp.getInfo();
-                System.out.print(tmpStu.ID);
-                System.out.println();
+                tmpStu.displayStudent();
             }
         }
     }

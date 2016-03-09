@@ -31,8 +31,7 @@ public class Course {
             for (SLNode tmp = list.head; tmp != null; tmp = tmp.next)
             {
                 Student tmpStu = (Student) (Student) tmp.getInfo();
-                System.out.print(tmpStu.ID);
-                System.out.println();
+                tmpStu.displayStudent();
             }
         }
     }//end printStuList
@@ -67,9 +66,10 @@ public class Course {
         for (SLNode tmp = stuList.head; tmp != null; tmp = tmp.next)  //cycle through this course's enrolled students
         {
             Student tmpStu = (Student) (Student) tmp.getInfo();
-            if (tmpStu.ID == stu.ID)  //check Student in the list versus student you're adding
+            if (tmpStu.ID == stu.ID)  //check Student in the list versus student you're removing
             {
                 isDuplicate = true;
+                stu.classCount--;
                 stuList.delete(stu);
                 currentEnrolled--;
                 //updateLists();  //update waitlist and stulist
