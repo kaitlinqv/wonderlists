@@ -62,6 +62,25 @@ public class Course {
         }
     }
 
+    public void removeStudent(Student stu)throws Exception{
+        boolean isDuplicate = false;
+        for (SLNode tmp = stuList.head; tmp != null; tmp = tmp.next)  //cycle through this course's enrolled students
+        {
+            Student tmpStu = (Student) (Student) tmp.getInfo();
+            if (tmpStu.ID == stu.ID)  //check Student in the list versus student you're adding
+            {
+                isDuplicate = true;
+                stuList.delete(stu);
+                //updateLists();  //update waitlist and stulist
+            }
+        }
+
+        if(!isDuplicate){
+            throw new Exception ("You are not enrolled in this course");
+        }
+
+    }
+
     public void displayCourse() {  //display course, works great in a for loop when listing my SLList
         System.out.printf("Course ID: %d\tCapacity: %d\tOpenings: %d\t Name: %s\n", courseNumber, courseCapacity, courseCapacity-currentEnrolled, name);
     }

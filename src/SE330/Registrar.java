@@ -15,7 +15,7 @@ public class Registrar {
         boolean isDuplicate = false;
         for (SLNode tmp = stuList.head; tmp != null; tmp = tmp.next)  //cycle through stuList
         {
-            Student tmpStu = (Student) (Student) tmp.getInfo();
+            Student tmpStu = (Student) (Student) tmp.getInfo();  //cast out the student in the info to a tmpStu
             if (tmpStu.ID == num) //if duplicate is found
             {
                 isDuplicate = true;  //this probably isn't needed
@@ -62,8 +62,8 @@ public class Registrar {
         }
     }
 
-    public void printCourseList() throws EmptyListException {
-        if ( courseList.isEmpty() )
+    public void printCourseList() throws EmptyListException {  //print a list of courses
+        if (courseList.isEmpty())
             throw new EmptyListException(courseList.name);
         else {
             for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
@@ -72,6 +72,21 @@ public class Registrar {
             }
         }
     }
+        public void dropCourse(Student stu, int courseNum)throws Exception{  //drop class and update from waitlist
+
+            for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
+                Course tmpCourse = (Course) (Course) tmp.getInfo();
+                if(tmpCourse.courseNumber == courseNum){
+                    try{
+                        tmpCourse.removeStudent(stu);
+                    }catch(Exception e){
+                        throw e;
+                    }
+                }
+            }
+
+    }
+
 
 
 

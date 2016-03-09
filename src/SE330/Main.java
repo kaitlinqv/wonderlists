@@ -2,6 +2,8 @@ package SE330;
 import java.io.*;
 public class Main {
 
+    /*  The UI wrapper needs to be initialized, probably through an additional class. Delete functions and a couple additional compare functions will be added*/
+
     public static void main(String[] args) {
 	    Student currentStudent = null;
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));

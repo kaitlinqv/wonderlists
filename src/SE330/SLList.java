@@ -70,6 +70,20 @@ public class SLList < T > {
         }
         return removedItem;
     }
+
+    public void delete(T el) { // find and remove el;
+        if (head != null) // if nonempty list;
+            if (el.equals(head.info)) // if head needs to be removed;
+                head = head.next;
+            else {
+                SLNode pred = head, tmp = head.next;
+                for ( ; tmp != null && !(tmp.info.equals(el));
+                      pred = pred.next, tmp = tmp.next);
+                if (tmp != null) // if found
+                    pred.next = tmp.next;
+            }
+    }
+
     public T find(T el) {
         SLNode tmp = head;
         for ( ; tmp != null && !el.equals(tmp.info); tmp = tmp.next);
