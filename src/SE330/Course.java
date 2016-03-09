@@ -71,6 +71,7 @@ public class Course {
             {
                 isDuplicate = true;
                 stuList.delete(stu);
+                currentEnrolled--;
                 //updateLists();  //update waitlist and stulist
             }
         }

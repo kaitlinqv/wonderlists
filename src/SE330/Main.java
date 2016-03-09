@@ -20,6 +20,17 @@ public class Main {
                 currentStudent = SB2016.login(number);
                 //System.out.print(currentStudent.ID);
                 //System.out.print((SB2016.stuList.find(currentStudent)).ID);
+                SB2016.printCourseList();
+//TESTING TESTING TESTING
+
+                System.out.println("Enter course to add");
+                number = Integer.parseInt(buffer.readLine().toString());
+                SB2016.addCourse(currentStudent, number);
+                SB2016.printCourseStudents(number);
+                SB2016.printCourseList();
+                SB2016.dropCourse(currentStudent, number);
+                //1SB2016.printCourseStudents(number);
+                SB2016.printCourseList();
             }
         }catch(Exception e){
             System.err.print(e);

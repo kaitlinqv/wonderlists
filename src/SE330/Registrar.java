@@ -72,18 +72,48 @@ public class Registrar {
             }
         }
     }
-        public void dropCourse(Student stu, int courseNum)throws Exception{  //drop class and update from waitlist
 
-            for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
-                Course tmpCourse = (Course) (Course) tmp.getInfo();
-                if(tmpCourse.courseNumber == courseNum){
-                    try{
-                        tmpCourse.removeStudent(stu);
-                    }catch(Exception e){
-                        throw e;
-                    }
+    public void printCourseStudents(int courseNum)throws Exception{  //print
+
+        for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
+            Course tmpCourse = (Course) (Course) tmp.getInfo();
+            if(tmpCourse.courseNumber == courseNum){
+                try{
+                    tmpCourse.printStuList(tmpCourse.stuList);
+                }catch(Exception e){
+                    throw e;
                 }
             }
+        }
+    }
+
+
+    public void dropCourse(Student stu, int courseNum)throws Exception{  //drop class and update from waitlist
+
+        for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
+            Course tmpCourse = (Course) (Course) tmp.getInfo();
+            if(tmpCourse.courseNumber == courseNum){
+                try{
+                    tmpCourse.removeStudent(stu);
+                }catch(Exception e){
+                    throw e;
+                }
+            }
+        }
+    }
+
+    public void addCourse(Student stu, int courseNum)throws Exception{  //add class
+
+        for (SLNode tmp = courseList.head; tmp != null; tmp = tmp.next) {
+            Course tmpCourse = (Course) (Course) tmp.getInfo();
+            if(tmpCourse.courseNumber == courseNum){
+                try{
+                    tmpCourse.addStudent(stu);
+                }catch(Exception e){
+                    throw e;
+                }
+            }
+        }
 
     }
 
