@@ -51,12 +51,12 @@ public class Course {
             }
         }
 
-        /*for (SLNode tmp = waitList.head; tmp != null; tmp = tmp.next){
+        for (SLNode tmp = waitList.head; tmp != null; tmp = tmp.next){
             Student tmpStu = (Student) (Student) tmp.getInfo();
             if (tmpStu.ID == stu.ID ){
                 waitList.delete(tmpStu);
             }
-        }*/
+        }
 
         if(stu.classCount<4) {  //if student class count is less than 4 and the course hasn't reached capacity
             if(currentEnrolled<courseCapacity) {
