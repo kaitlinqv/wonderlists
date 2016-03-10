@@ -1,18 +1,18 @@
 package SE330;
 
 /**
- * Created by Kenneth on 3/7/2016.
+ * Created by Kenneth on 3/7/2016.  Edited for template use
  */
-public class TreeNode
+public class TreeNode< T extends Comparable< T >>
 {
-    protected Comparable el;
-    protected TreeNode left, right;
+    T el;
+    TreeNode<T> left, right;
 
-    public TreeNode(Comparable el)
+    public TreeNode(T el)
     {
         this(el,null,null);
     }//End constructor brace
-    public TreeNode(Comparable el,TreeNode rt, TreeNode lt )
+    public TreeNode(T el,TreeNode rt, TreeNode lt )
     {
         this.el = el; left = lt; right = rt;
     }//End constructor brace

@@ -3,7 +3,7 @@ package SE330;
 /**
  * Created by Kenneth on 3/7/2016.
  */
-public class Tree
+public class Tree<T extends Comparable<T>>
 {
     protected TreeNode root;
     public Tree()
@@ -15,12 +15,12 @@ public class Tree
     {
         System.out.println(p.el + " ");
     }//End visit brace
-    public Comparable search(Comparable el)
+    public T search(T el)
     {
         return search(el);
     }//End search brace
 
-    public TreeNode search(TreeNode p, Comparable el)
+    public TreeNode search(TreeNode p, T el)
     {
         while(p != null)
         {
@@ -40,9 +40,9 @@ public class Tree
         }//End while brace
         return null;
     }//End search brace
-    public void delete(Comparable el) { deleteByMerging(el); }
+    public void delete(T el) { deleteByMerging(el); }
 
-    public void deleteByMerging(Comparable el)
+    public void deleteByMerging(T el)
     {
         TreeNode tmp, node, p = root, prev = null;
         while (p != null && !p.el.equals(el)) {  // find the node p
@@ -77,7 +77,7 @@ public class Tree
         else System.out.println("the tree is empty");
     }
 
-    public void insert (Comparable el)
+    public void insert (T el)
     {
         TreeNode p = root;
         TreeNode prev =  null;
