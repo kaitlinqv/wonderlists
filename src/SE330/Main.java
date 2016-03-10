@@ -13,7 +13,7 @@ public class Main {
         NavWrapper school = new NavWrapper(SB2016);
 
         do{
-            System.out.printf("\n\nEnter: 1 - Login | 2 - Display Course List | 3 - Add Course | 4 - Drop Course | 5 - Display Course Lists | 0 - Exit\n");
+            System.out.printf("\n\nEnter: 1 - Display Course List | 2 - Login | 3 - Add Course | 4 - Drop Course | 5 - Display Course Lists | 0 - Exit\n");
             try {
                 navigation = Integer.parseInt(buffer.readLine().toString());
                 System.out.println();
@@ -21,11 +21,12 @@ public class Main {
                 System.err.print(e);
             }
             switch (navigation){
+
                 case 1:
-                    school.loginWithNumber(navigation);
+                    school.displayCourseList();
                     break;
                 case 2:
-                    school.displayCourseList();
+                    school.loginWithNumber(navigation);
                     break;
                 case 3:
                     school.addCourse();

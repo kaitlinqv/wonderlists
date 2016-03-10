@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SE330/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.32637364">
+              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -60,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Registrar.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Registrar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SE330/Registrar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8186813">
+            <state vertical-scroll-proportion="0.0">
               <caret line="84" column="98" selection-start-line="84" selection-start-column="98" selection-end-line="84" selection-end-column="98" />
               <folding>
                 <element signature="e#315#316#0" expanded="true" />
@@ -183,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/SE330/EmptyListException.java" />
         <option value="$PROJECT_DIR$/src/SE330/NavWrapper.java" />
         <option value="$PROJECT_DIR$/src/SE330/Student.java" />
-        <option value="$PROJECT_DIR$/src/SE330/Main.java" />
         <option value="$PROJECT_DIR$/src/SE330/SLList.java" />
         <option value="$PROJECT_DIR$/src/SE330/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/SE330/Tree.java" />
@@ -191,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/SE330/theBinaryTree.java" />
         <option value="$PROJECT_DIR$/src/SE330/Course.java" />
         <option value="$PROJECT_DIR$/src/SE330/Registrar.java" />
+        <option value="$PROJECT_DIR$/src/SE330/Main.java" />
       </list>
     </option>
   </component>
@@ -690,17 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SE330/nodeForTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SE330/NavWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -711,14 +700,6 @@
             <element signature="e#355#356#0" expanded="true" />
             <element signature="e#383#384#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SE330/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,12 +731,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SE330/Registrar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8186813">
+        <state vertical-scroll-proportion="0.0">
           <caret line="84" column="98" selection-start-line="84" selection-start-column="98" selection-end-line="84" selection-end-column="98" />
           <folding>
             <element signature="e#315#316#0" expanded="true" />
             <element signature="e#465#466#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SE330/nodeForTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SE330/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32637364">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
