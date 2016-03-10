@@ -80,9 +80,9 @@ public class Registrar {
             Course tmpCourse = (Course) (Course) tmp.getInfo();
             if(tmpCourse.courseNumber == courseNum){
                 try{
-                    System.out.print("\nStudents Currently Enrolled:\n");
+                    System.out.printf("\nStudents Currently Enrolled in %s:\n", tmpCourse.name);
                     tmpCourse.printStuList(tmpCourse.stuList);
-                    System.out.print("\nStudents Currently on WaitLists:\n");
+                    System.out.printf("\nStudents Currently on WaitList for %s:\n", tmpCourse.name);
                     tmpCourse.printStuList(tmpCourse.waitList);
                 }catch(Exception e){
                     throw e;
