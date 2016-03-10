@@ -13,7 +13,7 @@ public class Main {
         NavWrapper school = new NavWrapper(SB2016);
 
         do{
-            System.out.printf("\n\nEnter: 1 - Login | 2 - Display Course List | 3 - Add Course | 4 - Drop Course | 5 - Display Course Students | 0 - Exit\n");
+            System.out.printf("\n\nEnter: 1 - Login | 2 - Display Course List | 3 - Add Course | 4 - Drop Course | 5 - Display Course Lists | 0 - Exit\n");
             try {
                 navigation = Integer.parseInt(buffer.readLine().toString());
                 System.out.println();

@@ -2,7 +2,7 @@ package SE330;
 
 
 /**
- * Created by Kaitlin on 3/8/2016.
+ * Created by Kaitlin on 3/8/2016.  I KNOW THIS IS NOT A SINGLE LINK LIST BUT A DOUBLE
  */
 public class SLList < T > {
     public SLNode< T > head;

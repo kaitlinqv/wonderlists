@@ -99,7 +99,7 @@ public class Course {
             try {
                 addStudent(waitList.deleteFromFront());
             }catch(Exception e){
-                System.out.print("Something went wrong");
+                //System.out.print("Something went wrong");
             }
         }
     }
