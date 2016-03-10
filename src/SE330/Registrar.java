@@ -58,6 +58,8 @@ public class Registrar {
                 Student tmpStu = (Student) (Student) tmp.getInfo();
                 tmpStu.displayStudent();
             }
+
+
         }
     }
 
@@ -78,7 +80,10 @@ public class Registrar {
             Course tmpCourse = (Course) (Course) tmp.getInfo();
             if(tmpCourse.courseNumber == courseNum){
                 try{
+                    System.out.print("\nStudents Currently Enrolled:\n");
                     tmpCourse.printStuList(tmpCourse.stuList);
+                    System.out.print("\nStudents Currently on WaitLists:\n");
+                    tmpCourse.printStuList(tmpCourse.waitList);
                 }catch(Exception e){
                     throw e;
                 }
