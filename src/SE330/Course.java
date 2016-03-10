@@ -6,7 +6,8 @@ package SE330;
 public class Course {
     public SLList<Student> stuList;  //list of enrolled students
     //public SLList<Student> waitList;  //waitlist to be implemented later
-    public Tree waitList;
+    //public Tree waitList;
+    public theBinaryTree waitList;
     public String name;  //name  of course
     public int courseNumber;  //course number
     public int courseCapacity;  //course Capacity
@@ -22,6 +23,7 @@ public class Course {
         courseCapacity = cap;
         stuList = new SLList<Student>();
         //waitList = new SLList<Student>();
+        waitList = new theBinaryTree();
         currentEnrolled = 0;
     }
 
@@ -62,7 +64,7 @@ public class Course {
                 stuList.insertAtBack(stu);
                 currentEnrolled++;
             }else {
-                waitList.insert((Comparable) stu);
+                waitList.insert(stu.ID);
                 //waitList.insertAtBack(stu);
                 throw new Exception("\nThis class is full, you have been added to the waitlist.\n");
 
